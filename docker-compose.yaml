@@ -6,6 +6,7 @@ services:
     volumes:
       - ./www:/var/www/html
       - ./vendor:/var/www/vendor
+      - ./images:/var/www/html/images
     ports:
       - "80:80"
     depends_on:
@@ -14,7 +15,7 @@ services:
     image: mariadb:10.4
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_DATABASE: bookstore
       MYSQL_USER: user
       MYSQL_PASSWORD: password
       MYSQL_ROOT_HOST: "%"
