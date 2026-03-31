@@ -5,7 +5,6 @@ services:
       dockerfile: ./.docker/web/Dockerfile
     volumes:
       - ./www:/var/www/html
-      - ./vendor:/var/www/vendor
       - ./images:/var/www/html/images
     ports:
       - "80:80"
