@@ -6,7 +6,7 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f4e8d8 0%, #e8dcc8 100%);
+  background: linear-gradient(135deg, #f4e8d8, #e8dcc8);
   color: #3d2817;
   line-height: 1.6;
   min-height: 100vh;
@@ -36,7 +36,6 @@ main {
   font-weight: 700;
 }
 
-/* Filter bar */
 .filter-bar {
   width: 100%;
   display: flex;
@@ -74,7 +73,6 @@ main {
   color: #3d2817;
   font-size: 0.9rem;
   cursor: pointer;
-  background-position: right 12px center;
   padding-right: 32px;
 }
 
@@ -84,23 +82,29 @@ main {
   box-shadow: 0 0 0 3px rgba(139, 90, 60, 0.15);
 }
 
-.filter-button {
-  padding: 9px 24px;
+.filter-button,
+.details-button,
+.btn-order {
   background-color: #8b5a3c;
   color: white;
   border: none;
   border-radius: 6px;
   font-weight: 600;
-  font-size: 0.9rem;
   cursor: pointer;
+}
+
+.filter-button {
+  padding: 9px 24px;
+  font-size: 0.9rem;
   align-self: flex-end;
 }
-
-.filter-button:hover {
+.filter-button:hover,
+.details-button:hover,
+.btn-order:hover {
   background-color: #5d2818;
+  box-shadow: 0 4px 12px rgba(93, 40, 24, 0.3);
 }
 
-/* Result count */
 .result-count {
   width: 100%;
   font-size: 0.9rem;
@@ -108,7 +112,6 @@ main {
   font-weight: 600;
   margin-bottom: 10px;
 }
-
 .no-results {
   width: 100%;
   text-align: center;
@@ -139,28 +142,26 @@ main {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
-
 .container p {
   margin-bottom: 8px;
   font-size: 0.9rem;
   color: #666;
 }
-
 .container p strong {
   color: #5d2818;
   font-weight: 600;
 }
-
 .book-info {
   flex: 1;
 }
 
 .container img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
   border-radius: 6px;
   margin: 15px 0;
+  background: #f0e6d6;
 }
 
 .container img:hover {
@@ -168,20 +169,10 @@ main {
 }
 
 .details-button {
-  background-color: #8b5a3c;
-  color: white;
   padding: 12px 20px;
-  border-radius: 6px;
   text-decoration: none;
-  font-weight: 600;
   text-align: center;
-  cursor: pointer;
   margin-top: auto;
-}
-
-.details-button:hover {
-  background-color: #5d2818;
-  box-shadow: 0 4px 12px rgba(93, 40, 24, 0.3);
 }
 
 .details-button:active {
@@ -195,7 +186,6 @@ footer {
   padding: 30px 20px;
 }
 
-/* Detail Page Styles */
 .detail-container {
   max-width: 900px;
   margin: 0 auto;
@@ -260,7 +250,6 @@ footer {
   font-size: 1.1rem;
   color: #666;
 }
-
 .detail-auteur strong,
 .detail-price strong {
   color: #5d2818;
@@ -269,29 +258,16 @@ footer {
 .detail-beschrijving {
   margin-bottom: 30px;
 }
-
 .detail-beschrijving h3 {
   color: #5d2818;
   font-size: 1.3rem;
   margin-bottom: 15px;
 }
-
 .detail-beschrijving p {
   color: #666;
   line-height: 1.8;
 }
 
 .btn-order {
-  background-color: #8b5a3c;
-  color: white;
   padding: 15px 30px;
-  border-radius: 6px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-order:hover {
-  background-color: #5d2818;
-  box-shadow: 0 4px 12px rgba(93, 40, 24, 0.3);
 }

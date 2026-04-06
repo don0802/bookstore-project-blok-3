@@ -2,8 +2,11 @@
 include 'database.php';
 
 $id = $_GET['id'];
+
 $query = "SELECT * FROM boeken WHERE id = $id";
+
 $result = mysqli_query($conn, $query);
+
 $boek = mysqli_fetch_assoc($result);
 ?>
 
@@ -42,7 +45,6 @@ $boek = mysqli_fetch_assoc($result);
         </div>
     </section>
 </main>
-
 <footer>
     <p>&copy; 2026 Bookstore. All rights reserved.</p>
 </footer>
